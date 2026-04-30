@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Clone') {
             steps {
                 echo 'Cloning Repository...'
@@ -14,9 +15,9 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Show HTML Content') {
             steps {
-                echo 'Testing Project...'
+                bat 'type index.html'
             }
         }
 
